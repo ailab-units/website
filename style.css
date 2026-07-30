@@ -63,7 +63,7 @@ nav .wrap{ display:flex; align-items:center; justify-content:space-between; heig
   font-family:'Fraunces', serif; font-size:18px; font-weight:500;
   text-decoration:none; display:flex; align-items:center; gap:10px;
 }
-.brand .mark{ width:20px; height:20px; flex-shrink:0; }
+.brand .mark{ width:26px; height:26px; flex-shrink:0; object-fit:contain; }
 .navlinks{ display:flex; align-items:center; gap:28px; font-size:14px; }
 .navlinks a{ text-decoration:none; color:var(--ink-soft); transition:color .15s ease; }
 .navlinks a:hover, .navlinks a.current{ color:var(--ink); }
