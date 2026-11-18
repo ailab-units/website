@@ -1,0 +1,46 @@
+name: Update publications
+
+on:
+  schedule:
+    - cron: "23 5 * * 1"        # every Monday, 05:23 UTC
+  workflow_dispatch:
+    inputs:
+      bootstrap:
+        description: "Only mark what is on DBLP today as already seen (adds no papers)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch new papers from DBLP
+        run: python fetch_publications.py ${{ inputs.bootstrap && '--bootstrap' || '' }} --summary "$RUNNER_TEMP/summary.md"
+
+      - name: Rebuild pages
+        run: |
+          python gen_people.py
+          python gen_papers.py
+
+      - name: Open pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: auto/publications
+          delete-branch: true
+          commit-message: "Update publications from DBLP"
+          title: "Publications: weekly update from DBLP"
+          body-path: ${{ runner.temp }}/summary.md
+          add-paths: |
+            data/
+            papers.html
+            people/

@@ -1,0 +1,980 @@
+{
+ "_readme": "Generated pages read this file. Edit papers here, then run gen_people.py and gen_papers.py. Delete a paper to drop it; its dblp_key stays in seen_dblp_keys so it will not come back.",
+ "papers": [
+  {
+   "title": "Localized Anomaly Detection via Differentiable D-vine Copulas",
+   "authors": "Pearson, Zanello, Russo, Bortolussi, Cairoli",
+   "venue": "CAESAR @ ECML-PKDD 2026",
+   "year": 2026,
+   "label": "JUL",
+   "url": "https://arxiv.org/abs/2607.25020",
+   "people": [
+    "bortolussi",
+    "cairoli",
+    "pearson"
+   ],
+   "on_lab_page": true,
+   "order": 0,
+   "source": "manual",
+   "month": 7
+  },
+  {
+   "title": "Beyond the Commitment Boundary: Probing Epiphenomenal Chain-of-Thought in Large Reasoning Models",
+   "authors": "Scalena, Candussio, Bortolussi, Fersini, Nissim, Sarti",
+   "venue": "",
+   "year": 2026,
+   "label": "JUN",
+   "url": "https://arxiv.org/abs/2606.13603",
+   "people": [
+    "bortolussi",
+    "candussio"
+   ],
+   "on_lab_page": true,
+   "order": 10,
+   "source": "manual",
+   "month": 6
+  },
+  {
+   "title": "RogueAI: A Reverse Turing Test for Detecting Licensed AI Deception in Dialogue",
+   "authors": "Candussio, Ballarin, Bonin, Della Rovere, Bortolussi",
+   "venue": "",
+   "year": 2026,
+   "label": "JUN",
+   "url": "https://arxiv.org/abs/2606.13310",
+   "people": [
+    "bortolussi",
+    "ballarin",
+    "candussio",
+    "della-rovere"
+   ],
+   "on_lab_page": true,
+   "order": 20,
+   "source": "manual",
+   "month": 6
+  },
+  {
+   "title": "Graph-Conditional Flow Matching for Relational Data Generation",
+   "authors": "Scassola, Saccani, Bortolussi",
+   "venue": "AAAI 2026",
+   "year": 2026,
+   "label": "MAR",
+   "url": "https://ojs.aaai.org/index.php/AAAI/article/view/39712",
+   "people": [
+    "bortolussi",
+    "scassola"
+   ],
+   "on_lab_page": true,
+   "order": 30,
+   "source": "manual",
+   "month": 3
+  },
+  {
+   "title": "A Sobering Look at Tabular Data Generation via Probabilistic Circuits",
+   "authors": "Scassola, Ponsford, Javaloy, Saccani, Bortolussi, Gouk, Vergari",
+   "venue": "",
+   "year": 2026,
+   "label": "2026",
+   "url": "",
+   "people": [
+    "bortolussi"
+   ],
+   "on_lab_page": true,
+   "order": 40,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "DeGAS: Gradient-Based Optimization of Probabilistic Programs without Sampling",
+   "authors": "Randone, Doz, Tribastone, Bortolussi",
+   "venue": "TACAS 2026",
+   "year": 2026,
+   "label": "JAN",
+   "url": "https://arxiv.org/abs/2601.15167",
+   "people": [
+    "bortolussi",
+    "doz"
+   ],
+   "on_lab_page": true,
+   "order": 50,
+   "source": "manual",
+   "month": 1
+  },
+  {
+   "title": "Distilling Formal Logic into Neural Spaces: A Kernel Alignment Approach for Signal Temporal Logic",
+   "authors": "Candussio, Sarti, Saveri, Bortolussi",
+   "venue": "NeSy 2026",
+   "year": 2026,
+   "label": "2026",
+   "url": "",
+   "people": [
+    "bortolussi",
+    "saveri",
+    "candussio"
+   ],
+   "on_lab_page": true,
+   "order": 60,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "Scalable and reliable stochastic parametric verification with stochastic variational smoothed model checking",
+   "authors": "Cairoli, Bortolussi",
+   "venue": "Int. J. Syst. Sci.",
+   "year": 2026,
+   "label": "2026",
+   "url": "",
+   "people": [
+    "bortolussi",
+    "cairoli"
+   ],
+   "on_lab_page": true,
+   "order": 70,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "Guiding Neuro-Symbolic Scenario Generation with Spatio-Temporal Logic",
+   "authors": "Bonin, Giacomarra, Bortolussi, Deshmukh, Cairoli",
+   "venue": "",
+   "year": 2025,
+   "label": "MAY",
+   "url": "https://huggingface.co/papers/2605.19038",
+   "people": [
+    "bortolussi",
+    "cairoli"
+   ],
+   "on_lab_page": true,
+   "order": 80,
+   "source": "manual",
+   "month": 5
+  },
+  {
+   "title": "Bridging Logic and Learning: Decoding Temporal Logic Embeddings via Transformers",
+   "authors": "Candussio, Saveri, Sarti, Bortolussi",
+   "venue": "ECML-PKDD 2025",
+   "year": 2025,
+   "label": "JUL",
+   "url": "https://arxiv.org/abs/2507.07808",
+   "people": [
+    "bortolussi",
+    "saveri",
+    "candussio"
+   ],
+   "on_lab_page": true,
+   "order": 90,
+   "source": "manual",
+   "month": 7
+  },
+  {
+   "title": "Diffusion-based Time Series Forecasting for Sewerage Systems",
+   "authors": "Pearson, Cairoli, Bortolussi, Russo, Zanello",
+   "venue": "",
+   "year": 2025,
+   "label": "JUN",
+   "url": "https://arxiv.org/abs/2506.08577",
+   "people": [
+    "bortolussi",
+    "cairoli",
+    "pearson"
+   ],
+   "on_lab_page": true,
+   "order": 100,
+   "source": "manual",
+   "month": 6
+  },
+  {
+   "title": "CoCAI: Copula-Based Conformal Anomaly Identification for Multivariate Time-Series",
+   "authors": "Pearson, Zanello, Russo, Bortolussi, Cairoli",
+   "venue": "RV 2025",
+   "year": 2025,
+   "label": "RV",
+   "url": "https://arxiv.org/abs/2507.17796",
+   "people": [
+    "bortolussi",
+    "cairoli",
+    "pearson"
+   ],
+   "on_lab_page": true,
+   "order": 110,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "Conformal Predictive Monitoring for Multi-modal Scenarios",
+   "authors": "Cairoli, Bortolussi, Deshmukh, Lindemann, Paoletti",
+   "venue": "RV 2025",
+   "year": 2025,
+   "label": "RV",
+   "url": "https://arxiv.org/abs/2509.01338",
+   "people": [
+    "bortolussi",
+    "cairoli"
+   ],
+   "on_lab_page": true,
+   "order": 120,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "Enhancing Reinforcement Learning for the Floorplanning of Analog ICs with Beam Search",
+   "authors": "Della Rovere, Basso, Bortolussi, Videnovic-Misic, Habal",
+   "venue": "SMACD 2025",
+   "year": 2025,
+   "label": "MAY",
+   "url": "https://ieeexplore.ieee.org/document/11092015",
+   "people": [
+    "bortolussi",
+    "della-rovere"
+   ],
+   "on_lab_page": true,
+   "order": 130,
+   "source": "manual",
+   "month": 5
+  },
+  {
+   "title": "Effective Analog ICs Floorplanning with Relational Graph Neural Networks and Reinforcement Learning",
+   "authors": "Basso, Bortolussi, Videnovic-Misic, Habal",
+   "venue": "DATE 2025",
+   "year": 2025,
+   "label": "DATE",
+   "url": "",
+   "people": [
+    "bortolussi"
+   ],
+   "on_lab_page": true,
+   "order": 140,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "A Genetic Algorithm Framework for Jailbreaking Large Language Models",
+   "authors": "Bonin, Cusin, De Lorenzo, Castelli, Manzoni",
+   "venue": "GECCO Companion 2025",
+   "year": 2025,
+   "label": "GECCO",
+   "url": "https://dl.acm.org/doi/10.1145/3712255.3734301",
+   "people": [
+    "cusin"
+   ],
+   "on_lab_page": true,
+   "order": 150,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "Evolutionary Synthesis of Probabilistic Programs",
+   "authors": "Doz, Randone, Medvet, Bortolussi",
+   "venue": "GECCO 2025",
+   "year": 2025,
+   "label": "GECCO",
+   "url": "https://dl.acm.org/doi/10.1145/3712256.3726388",
+   "people": [
+    "bortolussi",
+    "doz"
+   ],
+   "on_lab_page": true,
+   "order": 160,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "Guided by Stars: Interpretable Concept Learning Over Time Series via Temporal Logic Semantics",
+   "authors": "Ferfoglia, Silvetti, Saveri, Nenzi, Bortolussi",
+   "venue": "",
+   "year": 2025,
+   "label": "NOV",
+   "url": "https://arxiv.org/abs/2511.04244",
+   "people": [
+    "saveri",
+    "silvetti"
+   ],
+   "on_lab_page": true,
+   "order": 170,
+   "source": "manual",
+   "month": 11
+  },
+  {
+   "title": "Zero-Shot Conditioning of Score-Based Diffusion Models by Neuro-Symbolic Constraints",
+   "authors": "Scassola, Saccani, Carbone, Bortolussi",
+   "venue": "AAAI 2025",
+   "year": 2025,
+   "label": "AAAI",
+   "url": "https://arxiv.org/abs/2308.16534",
+   "people": [
+    "bortolussi",
+    "scassola"
+   ],
+   "on_lab_page": true,
+   "order": 180,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "Scaling Combinatorial Optimization Neural Improvement Heuristics with Online Search and Adaptation",
+   "authors": "Camerota Verdù, Castelli, Bortolussi",
+   "venue": "AAAI 2025",
+   "year": 2025,
+   "label": "AAAI",
+   "url": "",
+   "people": [
+    "bortolussi"
+   ],
+   "on_lab_page": true,
+   "order": 190,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "Neuro-Symbolic Discovery of Markov Population Processes",
+   "authors": "Bortolussi, Cairoli, Klein, Petrov",
+   "venue": "NeuS 2025",
+   "year": 2025,
+   "label": "NeuS",
+   "url": "",
+   "people": [
+    "bortolussi"
+   ],
+   "on_lab_page": true,
+   "order": 200,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "Blending adversarial training and representation-conditional purification via aggregation improves adversarial robustness",
+   "authors": "Ballarin, Ansuini, Bortolussi",
+   "venue": "TMLR",
+   "year": 2025,
+   "label": "TMLR",
+   "url": "https://arxiv.org/abs/2306.06081",
+   "people": [
+    "bortolussi",
+    "ballarin"
+   ],
+   "on_lab_page": true,
+   "order": 210,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "ResiDual Transformer Alignment with Spectral Decomposition",
+   "authors": "Basile, Maiorca, Bortolussi, Rodolà, Locatello",
+   "venue": "TMLR",
+   "year": 2025,
+   "label": "TMLR",
+   "url": "",
+   "people": [
+    "bortolussi"
+   ],
+   "on_lab_page": true,
+   "order": 220,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "On the Robustness of Bayesian Neural Networks to Adversarial Attacks",
+   "authors": "Bortolussi, Carbone, Laurenti, Patane, Sanguinetti, Wicker",
+   "venue": "IEEE TNNLS",
+   "year": 2025,
+   "label": "TNNLS",
+   "url": "https://arxiv.org/abs/2207.06154",
+   "people": [
+    "bortolussi"
+   ],
+   "on_lab_page": true,
+   "order": 230,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "Intrinsic Dimension Correlation: uncovering nonlinear connections in multimodal representations",
+   "authors": "Basile, Acevedo, Bortolussi, Anselmi, Rodriguez",
+   "venue": "ICLR 2025",
+   "year": 2025,
+   "label": "ICLR",
+   "url": "",
+   "people": [
+    "bortolussi"
+   ],
+   "on_lab_page": true,
+   "order": 240,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "Frequency maps reveal the correlation between Adversarial Attacks and Implicit Bias",
+   "authors": "Basile, Karantzas, d'Onofrio, Manzoni, Bortolussi, Rodriguez, Anselmi",
+   "venue": "IJCNN 2025",
+   "year": 2025,
+   "label": "IJCNN",
+   "url": "",
+   "people": [
+    "bortolussi"
+   ],
+   "on_lab_page": true,
+   "order": 250,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "When Can You Trust Your Explanations? A Robustness Analysis on Feature Importances",
+   "authors": "Vascotto, Rodriguez, Bonaita, Bortolussi",
+   "venue": "xAI 2025",
+   "year": 2025,
+   "label": "xAI",
+   "url": "",
+   "people": [
+    "bortolussi"
+   ],
+   "on_lab_page": true,
+   "order": 260,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "Timeseria: An object-oriented time series processing library",
+   "authors": "Russo, Taffoni, Bortolussi",
+   "venue": "SoftwareX",
+   "year": 2025,
+   "label": "SW-X",
+   "url": "",
+   "people": [
+    "bortolussi"
+   ],
+   "on_lab_page": true,
+   "order": 270,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "Inference of Probabilistic Programs with Moment-Matching Gaussian Mixtures",
+   "authors": "Randone, Bortolussi, Incerto, Tribastone",
+   "venue": "POPL 2024",
+   "year": 2024,
+   "label": "POPL",
+   "url": "",
+   "people": [
+    "bortolussi"
+   ],
+   "on_lab_page": true,
+   "order": 280,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "stl2vec: Semantic and Interpretable Vector Representation of Temporal Logic",
+   "authors": "Saveri, Nenzi, Bortolussi, Kretínský",
+   "venue": "ECAI 2024",
+   "year": 2024,
+   "label": "ECAI",
+   "url": "https://arxiv.org/abs/2405.14389",
+   "people": [
+    "bortolussi",
+    "saveri"
+   ],
+   "on_lab_page": true,
+   "order": 290,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "Is Machine Learning Model Checking Privacy Preserving?",
+   "authors": "Bortolussi, Nenzi, Saveri, Silvetti",
+   "venue": "ISoLA 2024",
+   "year": 2024,
+   "label": "ISoLA",
+   "url": "",
+   "people": [
+    "bortolussi",
+    "saveri",
+    "silvetti"
+   ],
+   "on_lab_page": true,
+   "order": 300,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "Towards a Probabilistic Programming Approach to Analyse Collective Adaptive Systems",
+   "authors": "Randone, Doz, Cairoli, Bortolussi",
+   "venue": "ISoLA 2024",
+   "year": 2024,
+   "label": "ISoLA",
+   "url": "",
+   "people": [
+    "bortolussi",
+    "cairoli"
+   ],
+   "on_lab_page": true,
+   "order": 310,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "ECATS: Explainable-by-Design Concept-Based Anomaly Detection for Time Series",
+   "authors": "Ferfoglia, Saveri, Nenzi, Bortolussi",
+   "venue": "NeSy 2024",
+   "year": 2024,
+   "label": "NeSy",
+   "url": "",
+   "people": [
+    "bortolussi",
+    "saveri"
+   ],
+   "on_lab_page": true,
+   "order": 320,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "Retrieval-Augmented Mining of Temporal Logic Specifications from Data",
+   "authors": "Saveri, Bortolussi",
+   "venue": "ECML-PKDD 2024",
+   "year": 2024,
+   "label": "ECML",
+   "url": "https://arxiv.org/abs/2405.14355",
+   "people": [
+    "bortolussi",
+    "saveri"
+   ],
+   "on_lab_page": true,
+   "order": 330,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "Fast ML-driven Analog Circuit Layout using Reinforcement Learning and Steiner Trees",
+   "authors": "Basso, Bortolussi, Videnovic-Misic, Habal",
+   "venue": "SMACD 2024",
+   "year": 2024,
+   "label": "SMACD",
+   "url": "",
+   "people": [
+    "bortolussi"
+   ],
+   "on_lab_page": true,
+   "order": 340,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "Deep Learning-Informed Bayesian Model-Based Analysis to Estimate Superspreading Events in Epidemic Outbreaks",
+   "authors": "Tasciotti, Urban, de Dea, Bortolussi, Caravagna, d'Onofrio",
+   "venue": "IEEE Access",
+   "year": 2024,
+   "label": "IEEE",
+   "url": "",
+   "people": [
+    "bortolussi"
+   ],
+   "on_lab_page": true,
+   "order": 350,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "Data Symmetries and Learning in Fully Connected Neural Networks",
+   "authors": "Anselmi, Manzoni, d'Onofrio, Rodriguez, Caravagna, Bortolussi, Cairoli",
+   "venue": "IEEE Access",
+   "year": 2023,
+   "label": "2023",
+   "url": "",
+   "people": [
+    "bortolussi",
+    "cairoli"
+   ],
+   "on_lab_page": true,
+   "order": 360,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "MoonLight: a lightweight tool for monitoring spatio-temporal properties",
+   "authors": "Nenzi, Bartocci, Bortolussi, Silvetti, Loreti",
+   "venue": "STTT",
+   "year": 2023,
+   "label": "2023",
+   "url": "",
+   "people": [
+    "bortolussi",
+    "silvetti"
+   ],
+   "on_lab_page": true,
+   "order": 370,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "Generative abstraction of Markov population processes",
+   "authors": "Cairoli, Anselmi, d'Onofrio, Bortolussi",
+   "venue": "Theor. Comput. Sci.",
+   "year": 2023,
+   "label": "2023",
+   "url": "",
+   "people": [
+    "bortolussi",
+    "cairoli"
+   ],
+   "on_lab_page": true,
+   "order": 380,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "Conformal Quantitative Predictive Monitoring of STL Requirements for Stochastic Processes",
+   "authors": "Cairoli, Paoletti, Bortolussi",
+   "venue": "HSCC 2023",
+   "year": 2023,
+   "label": "HSCC",
+   "url": "https://www.nicolapaoletti.com/assets/papers/CQR_HSCC23.pdf",
+   "people": [
+    "bortolussi",
+    "cairoli"
+   ],
+   "on_lab_page": true,
+   "order": 390,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "Towards Invertible Semantic-Preserving Embeddings of Logical Formulae",
+   "authors": "Saveri, Bortolussi",
+   "venue": "NeSy 2023",
+   "year": 2023,
+   "label": "NeSy",
+   "url": "",
+   "people": [
+    "bortolussi",
+    "saveri"
+   ],
+   "on_lab_page": true,
+   "order": 400,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "Data-Driven Inference of Chemical Reaction Networks via Graph-Based Variational Autoencoders",
+   "authors": "Bortolussi, Cairoli, Klein, Petrov",
+   "venue": "QEST 2023",
+   "year": 2023,
+   "label": "QEST",
+   "url": "",
+   "people": [
+    "bortolussi",
+    "cairoli"
+   ],
+   "on_lab_page": true,
+   "order": 410,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "Model Abstraction and Conditional Sampling with Score-Based Diffusion Models",
+   "authors": "Bortolussi, Cairoli, Giacomarra, Scassola",
+   "venue": "QEST 2023",
+   "year": 2023,
+   "label": "QEST",
+   "url": "",
+   "people": [
+    "bortolussi",
+    "cairoli"
+   ],
+   "on_lab_page": true,
+   "order": 420,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "Scalable Stochastic Parametric Verification with Stochastic Variational Smoothed Model Checking",
+   "authors": "Bortolussi, Cairoli, Carbone, Pulcini",
+   "venue": "RV 2023",
+   "year": 2023,
+   "label": "RV",
+   "url": "",
+   "people": [
+    "bortolussi",
+    "cairoli"
+   ],
+   "on_lab_page": true,
+   "order": 430,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "Learning-Based Approaches to Predictive Monitoring with Conformal Statistical Guarantees",
+   "authors": "Cairoli, Bortolussi, Paoletti",
+   "venue": "RV 2023",
+   "year": 2023,
+   "label": "RV",
+   "url": "",
+   "people": [
+    "bortolussi",
+    "cairoli"
+   ],
+   "on_lab_page": true,
+   "order": 440,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "Efficient extraction of seismic reflection with Deep Learning",
+   "authors": "Roncoroni, Forte, Bortolussi, Pipan",
+   "venue": "Comput. Geosci.",
+   "year": 2022,
+   "label": "2022",
+   "url": "",
+   "people": [
+    "bortolussi"
+   ],
+   "on_lab_page": true,
+   "order": 450,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "A Logic for Monitoring Dynamic Networks of Spatially-distributed Cyber-Physical Systems",
+   "authors": "Nenzi, Bartocci, Bortolussi, Loreti",
+   "venue": "Log. Methods Comput. Sci.",
+   "year": 2022,
+   "label": "2022",
+   "url": "",
+   "people": [
+    "bortolussi"
+   ],
+   "on_lab_page": true,
+   "order": 460,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "Resilience of Bayesian Layer-Wise Explanations under Adversarial Attacks",
+   "authors": "Carbone, Bortolussi, Sanguinetti",
+   "venue": "IJCNN 2022",
+   "year": 2022,
+   "label": "IJCNN",
+   "url": "",
+   "people": [
+    "bortolussi"
+   ],
+   "on_lab_page": true,
+   "order": 470,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "Neural Predictive Monitoring for Collective Adaptive Systems",
+   "authors": "Cairoli, Paoletti, Bortolussi",
+   "venue": "ISoLA 2022",
+   "year": 2022,
+   "label": "ISoLA",
+   "url": "",
+   "people": [
+    "bortolussi",
+    "cairoli"
+   ],
+   "on_lab_page": true,
+   "order": 480,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "Learning Model Checking and the Kernel Trick for Signal Temporal Logic on Stochastic Processes",
+   "authors": "Bortolussi, Gallo, Kretínský, Nenzi",
+   "venue": "TACAS 2022",
+   "year": 2022,
+   "label": "TACAS",
+   "url": "https://arxiv.org/abs/2201.09928",
+   "people": [
+    "bortolussi"
+   ],
+   "on_lab_page": true,
+   "order": 490,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "Neural predictive monitoring and a comparison of frequentist and Bayesian approaches",
+   "authors": "Bortolussi, Cairoli, Paoletti, Smolka, Stoller",
+   "venue": "STTT",
+   "year": 2021,
+   "label": "2021",
+   "url": "",
+   "people": [
+    "bortolussi"
+   ],
+   "on_lab_page": true,
+   "order": 500,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "Abstraction of Markov Population Dynamics via Generative Adversarial Nets",
+   "authors": "Cairoli, Carbone, Bortolussi",
+   "venue": "CMSB 2021",
+   "year": 2021,
+   "label": "CMSB",
+   "url": "https://arxiv.org/abs/2106.12981",
+   "people": [
+    "bortolussi",
+    "cairoli"
+   ],
+   "on_lab_page": true,
+   "order": 510,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "Random Projections for Improved Adversarial Robustness",
+   "authors": "Carbone, Sanguinetti, Bortolussi",
+   "venue": "IJCNN 2021",
+   "year": 2021,
+   "label": "IJCNN",
+   "url": "",
+   "people": [
+    "bortolussi"
+   ],
+   "on_lab_page": true,
+   "order": 520,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "Neural Predictive Monitoring Under Partial Observability",
+   "authors": "Cairoli, Bortolussi, Paoletti",
+   "venue": "RV 2021",
+   "year": 2021,
+   "label": "RV",
+   "url": "",
+   "people": [
+    "bortolussi",
+    "cairoli"
+   ],
+   "on_lab_page": true,
+   "order": 530,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "Fluid approximation of broadcasting systems",
+   "authors": "Bortolussi, Hillston, Loreti",
+   "venue": "Theor. Comput. Sci.",
+   "year": 2020,
+   "label": "2020",
+   "url": "",
+   "people": [
+    "bortolussi"
+   ],
+   "on_lab_page": true,
+   "order": 540,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "Robustness of Bayesian Neural Networks to Gradient-Based Attacks",
+   "authors": "Carbone, Wicker, Laurenti, Patané, Bortolussi, Sanguinetti",
+   "venue": "NeurIPS 2020",
+   "year": 2020,
+   "label": "NeurIPS",
+   "url": "",
+   "people": [
+    "bortolussi"
+   ],
+   "on_lab_page": true,
+   "order": 550,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "MoonLight: A Lightweight Tool for Monitoring Spatio-Temporal Properties",
+   "authors": "Bartocci, Bortolussi, Loreti, Nenzi, Silvetti",
+   "venue": "RV 2020",
+   "year": 2020,
+   "label": "RV",
+   "url": "",
+   "people": [
+    "bortolussi",
+    "silvetti"
+   ],
+   "on_lab_page": true,
+   "order": 560,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "Certifiably Robust Reinforcement Learning under Spatio-Temporal Logic Specifications",
+   "authors": "Cairoli, Bortolussi",
+   "venue": "CDC 2026",
+   "year": 2026,
+   "label": "2026",
+   "url": "",
+   "people": [
+    "cairoli"
+   ],
+   "on_lab_page": true,
+   "order": 10000,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "Time Robustness for Point-Based Semantics of Metric Interval Temporal Logic",
+   "authors": "Silvetti, Compagnucci, Cairoli, Trubiani, Nenzi",
+   "venue": "KR 2026",
+   "year": 2026,
+   "label": "2026",
+   "url": "https://doi.org/10.24963/kr.2026/56",
+   "people": [
+    "cairoli",
+    "silvetti"
+   ],
+   "on_lab_page": true,
+   "order": 10001,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "Conformal quantitative predictive monitoring of stochastic systems with conditional validity",
+   "authors": "Cairoli, Kuipers, Bortolussi, Paoletti",
+   "venue": "Nonlinear Anal. Hybrid Syst.",
+   "year": 2025,
+   "label": "2025",
+   "url": "https://doi.org/10.1016/j.nahs.2025.101606",
+   "people": [
+    "cairoli"
+   ],
+   "on_lab_page": true,
+   "order": 10004,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "Certified Guidance for Planning with Deep Generative Models",
+   "authors": "Giacomarra, Hosseini, Paoletti, Cairoli",
+   "venue": "AAMAS 2025",
+   "year": 2025,
+   "label": "2025",
+   "url": "https://dl.acm.org/doi/10.5555/3709347.3743606",
+   "people": [
+    "cairoli"
+   ],
+   "on_lab_page": true,
+   "order": 10005,
+   "source": "manual",
+   "month": null
+  },
+  {
+   "title": "Graph Neural Networks for Propositional Model Counting",
+   "authors": "Saveri, Bortolussi",
+   "venue": "",
+   "year": 2022,
+   "label": "2022",
+   "url": "https://arxiv.org/abs/2205.04423",
+   "people": [
+    "saveri"
+   ],
+   "on_lab_page": true,
+   "order": 10008,
+   "source": "manual",
+   "month": null
+  }
+ ],
+ "seen_dblp_keys": []
+}
