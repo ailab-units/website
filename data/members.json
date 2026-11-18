@@ -1,15 +1,62 @@
 {
- "_readme": "People whose publications are fetched from DBLP every week. 'slug' is the folder under people/ (null if the person has no profile page yet). Leave dblp_pid empty: the first run looks it up by exact name and writes it here, check it in the pull request. Remove a person (or set fetch to false) to stop tracking them.",
+ "_readme": "People whose publications are fetched from DBLP every week. 'slug' is the folder under people/ (null if the person has no profile page yet). Leave dblp_pid empty: the first run looks it up by exact name and writes it here, check it in the pull request. Remove a person (or set fetch to false) to stop tracking them. The order here is the order of the cards in the 'current members' grid on people.html; people without a profile page (slug null) get a plain card from 'role' and 'photo'.",
  "since_year": 2020,
  "members": [
-  {"slug": "bortolussi",   "name": "Luca Bortolussi",            "dblp_pid": "32/1171", "fetch": true},
-  {"slug": "cairoli",      "name": "Francesca Cairoli",          "dblp_pid": "",        "fetch": true},
-  {"slug": "saveri",       "name": "Gaia Saveri",                "dblp_pid": "",        "fetch": true},
-  {"slug": "silvetti",     "name": "Simone Silvetti",            "dblp_pid": "",        "fetch": true},
-  {"slug": "candussio",    "name": "Sara Candussio",             "dblp_pid": "",        "fetch": true},
-  {"slug": "della-rovere", "name": "Sandro Junior Della Rovere", "dblp_pid": "",        "fetch": true},
-  {"slug": "della-siega",  "name": "Alessandro Della Siega",     "dblp_pid": "",        "fetch": true},
-  {"slug": "cusin",        "name": "Lorenzo Cusin",              "dblp_pid": "",        "fetch": true},
-  {"slug": null,           "name": "Gabriele Gavino Pintus",     "dblp_pid": "",        "fetch": true}
+  {
+   "slug": "bortolussi",
+   "name": "Luca Bortolussi",
+   "dblp_pid": "32/1171",
+   "fetch": true
+  },
+  {
+   "slug": "cairoli",
+   "name": "Francesca Cairoli",
+   "dblp_pid": "",
+   "fetch": true
+  },
+  {
+   "slug": "saveri",
+   "name": "Gaia Saveri",
+   "dblp_pid": "",
+   "fetch": true
+  },
+  {
+   "slug": "silvetti",
+   "name": "Simone Silvetti",
+   "dblp_pid": "",
+   "fetch": true
+  },
+  {
+   "slug": "candussio",
+   "name": "Sara Candussio",
+   "dblp_pid": "",
+   "fetch": true
+  },
+  {
+   "slug": "della-rovere",
+   "name": "Sandro Junior Della Rovere",
+   "dblp_pid": "",
+   "fetch": true
+  },
+  {
+   "slug": "della-siega",
+   "name": "Alessandro Della Siega",
+   "dblp_pid": "",
+   "fetch": true
+  },
+  {
+   "slug": null,
+   "name": "Gabriele Gavino Pintus",
+   "dblp_pid": "",
+   "fetch": true,
+   "role": "PhD Student",
+   "photo": "people/pintus/photo.jpg"
+  },
+  {
+   "slug": "cusin",
+   "name": "Lorenzo Cusin",
+   "dblp_pid": "",
+   "fetch": true
+  }
  ]
 }

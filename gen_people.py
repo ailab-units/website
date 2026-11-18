@@ -1,6 +1,6 @@
 import os
 import html
-from pubs_lib import load_json, papers_for, sub_html, PUBS_PATH
+from pubs_lib import load_json, papers_for, sub_html, PUBS_PATH, MEMBERS_PATH
 
 TEMPLATE = """<!doctype html>
 <html lang="en">
@@ -79,14 +79,35 @@ def tag(t, cls=""):
     c = f' {cls}' if cls else ''
     return f'<span class="tag{c}">{t}</span>'
 
+# One vocabulary for every tag on the site: same wording and same colour everywhere.
+# Colour families follow topics.html: teal = neuro-symbolic / generative, terracotta = robustness
+# and trust, yellow = formal methods. Add new tags here, never inline.
+TAG_COLORS = {
+    "neuro-symbolic AI": "", "generative AI": "", "synthetic data": "olive",
+    "trustworthy GenAI": "terracotta", "robustness": "terracotta",
+    "formal methods": "yellow", "temporal logic": "yellow", "safe autonomy": "yellow",
+    "uncertainty quantification": "yellow", "probabilistic programming": "olive",
+    "interpretability": "pink", "LLMs": "green", "time series": "purple",
+    "reinforcement learning": "blue", "multi-agent systems": "blue",
+    "electronic design automation": "slate", "analog integrated circuit layout": "rose",
+    "physics-inspired ML": "slate", "BPMN": "brown",
+}
+
+def T(*names):
+    unknown = [n for n in names if n not in TAG_COLORS]
+    if unknown:
+        raise SystemExit(f"Unknown tag(s) {unknown}: add them to TAG_COLORS in gen_people.py")
+    return "".join(tag(n, TAG_COLORS[n]) for n in names)
+
 def pub(year, title, authors, url):
     return f'''      <a class="pub" href="{url}" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;">
         <span class="yr">{year}</span>
         <span><span class="t">{title}</span><span class="a">{authors}</span></span>
       </a>'''
 
-LINK_LABELS = [("website","Website"),("email","Email"),("scholar","Google Scholar"),("scopus","Scopus"),
-               ("orcid","ORCID"),("github","GitHub"),("linkedin","LinkedIn"),("x","X")]
+LINK_LABELS = [("website","Website"),("email","Email"),("scholar","Google Scholar"),("dblp","DBLP"),
+               ("scopus","Scopus"),("orcid","ORCID"),("github","GitHub"),("huggingface","Hugging Face"),
+               ("linkedin","LinkedIn"),("x","X")]
 
 def links_html(links):
     if not links:
@@ -99,13 +120,19 @@ people = {
 "bortolussi": dict(
     name="Luca Bortolussi",
     role="Principal Investigator &middot; Full Professor",
-    tags=tag("trustworthy GenAI")+tag("neuro-explicit methods","terracotta")+tag("formal verification","yellow"),
+    tags=T("trustworthy GenAI", "neuro-symbolic AI", "formal methods"),
     bio="Leads the AI Lab's research on making generative AI trustworthy by construction: constraining diffusion and flow-based models with explicit symbolic and logical structure (neuro-explicit methods), and verifying their behavior formally rather than trusting it empirically. His two-decade background in stochastic model checking underpins the lab's current push to make generative models auditable, constrainable, and provably safe. He supervises most of the lab's PhD students and holds long-running collaborations with the University of Edinburgh, Saarland University, and King's College London.",
+    links=dict(
+        email="mailto:lbortolussi@units.it",
+        scholar="https://scholar.google.com/citations?user=p5ynADcAAAAJ",
+        orcid="https://orcid.org/0000-0001-8874-4001",
+        linkedin="https://www.linkedin.com/in/luca-bortolussi-5211134/",
+    ),
 ),
 "cairoli": dict(
     name="Francesca Cairoli",
     role="Tenure-Track Assistant Professor (RTT)",
-    tags=tag("safe autonomy","yellow")+tag("multi-agent systems","blue")+tag("neuro-symbolic AI","terracotta")+tag("uncertainty quantification"),
+    tags=T("safe autonomy", "multi-agent systems", "neuro-symbolic AI", "uncertainty quantification"),
     bio="Francesca is a tenure-track assistant professor of computer science in the Department of Mathematics, Informatics and Geosciences at the University of Trieste. Her research focuses on the safety assurance of autonomous systems, strategically integrating the scalability of machine learning with the rigorous, verifiable guarantees of formal methods. She combines scientific machine learning and neuro-symbolic AI to embed structured domain knowledge and safety constraints directly into the learning process &mdash; using deep generative models to reason about complex, stochastic systems and developing efficient, statistically grounded quantifications of uncertainty for safety-critical applications.",
     links=dict(
         website="https://francescacairoli.github.io/",
@@ -120,9 +147,10 @@ people = {
 "saveri": dict(
     name="Gaia Saveri",
     role="Postdoc",
-    tags=tag("neuro-symbolic","terracotta")+tag("BPMN","blue")+tag("GenAI","green"),
+    tags=T("neuro-symbolic AI", "BPMN", "generative AI"),
     bio="She is a postdoctoral researcher in neuro-symbolic computing (with a focus on integrating temporal logic requirements in learning architectures) and business process modelling and simulation. Besides, she is involved in projects promoting the use of generative AI (especially that with a neuro-symbolic flavour!) in healthcare and public administration.",
     links=dict(
+        orcid="https://orcid.org/0009-0003-2948-7705",
         scholar="https://scholar.google.com/citations?user=AH33w6EAAAAJ",
         linkedin="https://www.linkedin.com/in/gaia-saveri-b7059a1b7/",
     ),
@@ -130,9 +158,10 @@ people = {
 "silvetti": dict(
     name="Simone Silvetti",
     role="Postdoc",
-    tags=tag("formal methods","yellow")+tag("neuro-explicit","terracotta")+tag("interpretability","pink"),
+    tags=T("formal methods", "neuro-symbolic AI", "interpretability"),
     bio="Simone Silvetti is a postdoctoral fellow at the Department of Engineering and Architecture of the University of Trieste. His research combines machine learning with quantitative formal methods to verify and design complex systems, with contributions to temporal logic specification languages and the monitoring of cyber-physical systems. His current interests include neuro-symbolic approaches that embed temporal logic formulae into continuous spaces, with applications to time series analysis and reinforcement learning. He is exploring how interpretable temporal logic patterns can be extracted from inference-time trajectories of large language models, to monitor generation at runtime and anticipate failures such as hallucinations. He also works on machine learning for edge devices, compressing computer vision models and developing audio models for insect sound recognition. He studied mathematics at Sapienza University of Rome, received a PhD in computer science from the University of Udine, and spent ten years at Esteco before joining the University of Trieste.",
     links=dict(
+        orcid="https://orcid.org/0000-0001-8048-9317",
         website="https://simonesilvetti.com",
         scholar="https://scholar.google.com/citations?user=q_ax9IUAAAAJ",
         github="https://github.com/simonesilvetti",
@@ -142,25 +171,34 @@ people = {
 "ballarin": dict(
     name="Emanuele Ballarin",
     role="PhD Candidate &middot; also affiliated with IIT Genova",
-    tags=tag("trustworthy GenAI","terracotta")+tag("adversarial robustness","terracotta")+tag("physics-inspired ML","yellow"),
+    tags=T("robustness", "physics-inspired ML", "trustworthy GenAI"),
     bio="Best known for CARSO, an adversarial defence mechanism combining adversarial training and purification &mdash; part of the lab's broader effort to make deep generative and discriminative models trustworthy under attack, not just accurate on clean data. Also a co-author of RogueAI, probing whether conversational AI can be trusted to be honest. His PhD thesis is broader still: it covers continuous-time quantum walks, Koopman operator learning, and the Forward-Forward algorithm as a biologically-plausible alternative to backpropagation.",
 ),
 "candussio": dict(
     name="Sara Candussio",
-    role="PhD Student (ADSAI programme)",
-    tags=tag("LLM reasoning","green")+tag("chain-of-thought faithfulness","brown")+tag("trustworthy conversational AI","yellow"),
+    role="PhD Student",
+    tags=T("LLMs", "interpretability", "neuro-symbolic AI"),
     bio="Studies how large reasoning models actually form their answers during chain-of-thought inference &mdash; and how much of that visible reasoning is real versus decorative. With Daniel Scalena, Gabriele Sarti (Northeastern University), Elisabetta Fersini and Malvina Nissim, she located a \"commitment boundary\" inside reasoning traces: a sharp point where the model locks in its answer, after which further CoT steps are largely epiphenomenal and can be safely cut. This connects to her broader interest in trustworthy and deceptive conversational AI, including RogueAI, a reverse Turing Test deployed as a public web game to test whether people can detect an LLM licensed to lie.",
+    links=dict(
+        website="https://gaoithee.github.io/saracandussio.github.io/",
+        email="mailto:sara.candussio@phd.units.it",
+        orcid="https://orcid.org/0009-0004-5198-6970",
+        github="https://github.com/gaoithee",
+        huggingface="https://huggingface.co/saracandu",
+        linkedin="https://www.linkedin.com/in/saracandussio",
+        x="https://x.com/SaraCandussio",
+    ),
 ),
 "scassola": dict(
     name="Davide Scassola",
     role="PhD Candidate",
-    tags=tag("neuro-explicit GenAI","terracotta")+tag("diffusion models")+tag("synthetic data","yellow"),
+    tags=T("neuro-symbolic AI", "generative AI", "synthetic data"),
     bio="Works on neuro-explicit generative AI: score-based diffusion and flow-matching models whose outputs are shaped by explicit constraints rather than left to implicit statistical patterns. With Ginevra Carbone, conditions diffusion models on neuro-symbolic constraints; with Sebastiano Saccani and industry partner Aindo SpA, develops flow matching for synthetic relational/tabular data as a trustworthy, privacy-enhancing alternative to sharing real data.",
 ),
 "della-rovere": dict(
     name="Sandro Junior Della Rovere",
     role="PhD Student",
-    tags=tag("electronic design automation","slate")+tag("analog integrated circuit layout","rose")+tag("reinforcement learning"),
+    tags=T("electronic design automation", "analog integrated circuit layout", "reinforcement learning"),
     bio="My research is in the Electronic Design Automation field, with a focus on analog integrated circuit layout automation. My current research combines reinforcement learning for device placement, sequential pathfinding for net routing, and tree search extensions for whole-layout optimization.</p>\n    <p>Going forward, I plan to explore LLM agents in the loop and surrogate models for post-layout simulation, with the aim of building AI-based tools for a field that remains largely unexplored.</p>\n    <p>Beyond the lab, I am an enthusiast of all things science and technology.",
     links=dict(
         scholar="https://scholar.google.com/citations?user=bDF_aCEAAAAJ",
@@ -172,38 +210,75 @@ people = {
 ),
 "della-siega": dict(
     name="Alessandro Della Siega",
-    role="MSc Student, Data Science &amp; Artificial Intelligence",
-    tags=tag("machine learning"),
-    bio="Master's student in Data Science and Artificial Intelligence at the University of Trieste, working with the lab. No publications yet &mdash; add a short bio here once available.",
+    role="PhD Student",
+    tags=T("neuro-symbolic AI", "interpretability", "time series"),
+    bio="PhD student in Applied Data Science and Artificial Intelligence at the University of Trieste, working with the lab. A longer bio will follow.",
 ),
 "doz": dict(
     name="Romina Doz",
     role="PhD Student (ADSAI programme)",
-    tags=tag("neuro-explicit methods","terracotta")+tag("formal methods","yellow")+tag("probabilistic programs"),
+    tags=T("neuro-symbolic AI", "formal methods", "probabilistic programming"),
     bio="First-year PhD student working in a probabilistic framework, on inference and gradient-based optimization of probabilistic programs &mdash; a neuro-explicit approach to generative modeling where program structure and uncertainty are made explicit rather than learned as a black box. Background in Physics (BSc) and Data Science and Scientific Computing (MSc). Also interested in explainable AI and causality.",
 ),
 "pearson": dict(
     name="Nicholas Andrea Pearson",
     role="PhD Student (ADSAI programme)",
-    tags=tag("trustworthy GenAI","terracotta")+tag("diffusion models")+tag("conformal prediction","yellow"),
+    tags=T("trustworthy GenAI", "time series", "uncertainty quantification"),
     bio="Applies neuro-explicit, trustworthy generative AI to a real industrial problem: forecasting and anomaly detection in urban sewerage systems, with conformal statistical guarantees on top of diffusion-based time series models. His most recent work develops differentiable D-vine copulas for localized anomaly detection, refining the conformal anomaly framework introduced with CoCAI. Supervised by prof. Bortolussi in collaboration with Idrostudi Srl. MSc in Data Science and Scientific Computing (2022), BSc in Statistics (2020); previously worked with NielsenIQ on computer vision and information retrieval.",
 ),
 "cusin": dict(
     name="Lorenzo Cusin",
     role="PhD Student",
-    tags=tag("trustworthy GenAI","terracotta")+tag("LLM robustness"),
+    tags=T("trustworthy GenAI", "LLMs", "robustness"),
     bio="Bridges the AI Lab with the adjacent Genetic Programming group (Andrea De Lorenzo, Luca Manzoni) on a shared trustworthy-GenAI question: how robust are large language models to adversarial manipulation. Co-author of a genetic-algorithm framework for jailbreaking LLMs, work that feeds directly into the lab's broader effort to understand and close the vulnerabilities of generative models.",
+    links=dict(
+        orcid="https://orcid.org/0009-0005-4819-905X",
+    ),
 ),
 }
 
-PAPERS = load_json(PUBS_PATH)["papers"]
+PAPERS = load_json(PUBS_PATH)
+PAPERS = PAPERS["papers"]
+MEMBERS = load_json(MEMBERS_PATH)["members"]
+DBLP = {m["slug"]: m["dblp_pid"] for m in MEMBERS if m.get("slug") and m.get("dblp_pid")}
 
 for slug, p in people.items():
     mine = papers_for(slug, PAPERS)
     pubs_html = "\n".join(pub(x["year"], html.escape(x["title"]), sub_html(x), x.get("url") or "#") for x in mine) if mine else '      <p style="color:var(--ink-soft); font-size:14.5px;">No publications listed yet.</p>'
-    html_out = TEMPLATE.format(name=p["name"], role=p["role"], tags=p["tags"], bio=p["bio"], pubs=pubs_html, links=links_html(p.get("links")))
+    links = dict(p.get("links") or {})
+    if slug in DBLP and "dblp" not in links:
+        links["dblp"] = f"https://dblp.org/pid/{DBLP[slug]}.html"
+    html_out = TEMPLATE.format(name=p["name"], role=p["role"], tags=p["tags"], bio=p["bio"], pubs=pubs_html, links=links_html(links))
     path = f"people/{slug}/index.html"
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
         f.write(html_out)
     print("wrote", path)
+
+# ---- the "current members" grid on people.html uses the same name/role/tags as the profiles
+AVATAR_FALLBACK = ("this.parentElement.style.background='linear-gradient(135deg, color-mix(in srgb, "
+                   "var(--teal) 18%, var(--bg-raised)), var(--bg-raised))'; this.remove();")
+
+def card(m):
+    slug = m.get("slug")
+    if slug and slug in people:
+        p = people[slug]
+        photo = next((f"people/{slug}/{f}" for f in ("photo.jpg", "photo.png") if os.path.exists(f"people/{slug}/{f}")), f"people/{slug}/photo.jpg")
+        return (f'      <a class="person" href="people/{slug}/"><div class="avatar"><img src="{photo}" alt="" loading="lazy" onerror="{AVATAR_FALLBACK}"></div>'
+                f'<h3>{p["name"]}</h3><span class="role">{p["role"]}</span>\n'
+                f'        <div class="topics">{p["tags"]}</div></a>')
+    # no profile page yet: plain card
+    pic = m.get("photo", "")
+    img = f'<img src="{pic}" alt="" loading="lazy" onerror="{AVATAR_FALLBACK}">' if pic else ""
+    return (f'      <div class="person" style="cursor:default;"><div class="avatar">{img}</div>'
+            f'<h3>{html.escape(m["name"])}</h3><span class="role">{m.get("role", "")}</span></div>')
+
+START, END = "<!-- members:start (generated by gen_people.py) -->", "<!-- members:end -->"
+page = open("people.html", encoding="utf-8").read()
+if START in page:
+    a, b = page.index(START) + len(START), page.index(END)
+    cards = "\n".join(card(m) for m in MEMBERS if m.get("current", True))
+    page = page[:a] + "\n" + cards + "\n      " + page[b:]
+    with open("people.html", "w", encoding="utf-8") as f:
+        f.write(page)
+    print("wrote people.html (members grid)")
