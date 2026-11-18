@@ -172,13 +172,6 @@ people = {
         ("2021","Neural Predictive Monitoring Under Partial Observability","Cairoli, Bortolussi, Paoletti &middot; RV 2021",""),
     ]
 ),
-"cina": dict(
-    name="Antonio Emanuele Cin\u00e0",
-    role="Collaborator",
-    tags=tag("adversarial ML","terracotta")+tag("ML security","terracotta"),
-    bio="External collaborator working on adversarial machine learning and the security of learning systems &mdash; understanding how models can be attacked, and how to make them resilient.",
-    pubs=[]
-),
 "saveri": dict(
     name="Gaia Saveri",
     role="Research Collaborator &middot; PhD (national AI programme)",
@@ -268,7 +261,7 @@ people = {
 ),
 "cusin": dict(
     name="Lorenzo Cusin",
-    role="MSc Student",
+    role="PhD Student",
     tags=tag("trustworthy GenAI","terracotta")+tag("LLM robustness"),
     bio="Bridges the AI Lab with the adjacent Genetic Programming group (Andrea De Lorenzo, Luca Manzoni) on a shared trustworthy-GenAI question: how robust are large language models to adversarial manipulation. Co-author of a genetic-algorithm framework for jailbreaking LLMs, work that feeds directly into the lab's broader effort to understand and close the vulnerabilities of generative models.",
     pubs=[
