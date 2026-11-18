@@ -38,7 +38,7 @@ TEMPLATE = """<!doctype html>
         <h1 class="profile-name">{name}</h1>
         <div class="profile-role">{role}</div>
         <div class="profile-tags">{tags}</div>
-      </div>
+{links}      </div>
     </div>
   </div>
 </header>
@@ -82,6 +82,16 @@ def pub(year, title, authors, url):
         <span class="yr">{year}</span>
         <span><span class="t">{title}</span><span class="a">{authors}</span></span>
       </a>'''
+
+LINK_LABELS = [("website","Website"),("email","Email"),("scholar","Google Scholar"),("scopus","Scopus"),
+               ("orcid","ORCID"),("github","GitHub"),("linkedin","LinkedIn"),("x","X")]
+
+def links_html(links):
+    if not links:
+        return ""
+    items = "".join(f'<a href="{links[k]}" target="_blank" rel="noopener">{label}</a>'
+                    for k, label in LINK_LABELS if links.get(k))
+    return f'        <div class="profile-links">{items}</div>\n'
 
 people = {
 "bortolussi": dict(
@@ -149,12 +159,26 @@ people = {
 ),
 "cairoli": dict(
     name="Francesca Cairoli",
-    role="RTT (Ricercatore a Tempo Determinato)",
-    tags=tag("conformal prediction")+tag("formal methods","yellow")+tag("generative modeling","terracotta"),
-    bio="Works on giving generative and predictive models statistical guarantees they can be trusted on: conformal prediction for monitoring stochastic and cyber-physical systems, and generative abstraction of Markov population models constrained by formal specifications. A recurring question across her work is how to certify, not just observe, that a generative model's output can be relied upon. Long-running collaboration with Nicola Paoletti (King's College London) since 2019.",
+    role="Tenure-Track Assistant Professor (RTT)",
+    tags=tag("safe autonomy","yellow")+tag("multi-agent systems","blue")+tag("neuro-symbolic AI","terracotta")+tag("uncertainty quantification"),
+    bio="Francesca is a tenure-track assistant professor of computer science in the Department of Mathematics, Informatics and Geosciences at the University of Trieste. Her research focuses on the safety assurance of autonomous systems, strategically integrating the scalability of machine learning with the rigorous, verifiable guarantees of formal methods. She combines scientific machine learning and neuro-symbolic AI to embed structured domain knowledge and safety constraints directly into the learning process &mdash; using deep generative models to reason about complex, stochastic systems and developing efficient, statistically grounded quantifications of uncertainty for safety-critical applications.",
+    links=dict(
+        website="https://francescacairoli.github.io/",
+        email="mailto:francesca.cairoli@units.it",
+        scholar="https://scholar.google.it/citations?user=3s1GGlIAAAAJ",
+        scopus="https://www.scopus.com/authid/detail.uri?authorId=57211159271",
+        orcid="https://orcid.org/0000-0002-6994-6553",
+        github="https://github.com/francescacairoli",
+        linkedin="https://www.linkedin.com/in/francesca-cairoli-18a485160/",
+    ),
     pubs=[
+        # TODO: add the extended arXiv version when it is out
+        ("2026","Certifiably Robust Reinforcement Learning under Spatio-Temporal Logic Specifications","Cairoli, Bortolussi &middot; CDC 2026",""),
+        ("2026","Time Robustness for Point-Based Semantics of Metric Interval Temporal Logic","Silvetti, Compagnucci, Cairoli, Trubiani, Nenzi &middot; KR 2026","https://doi.org/10.24963/kr.2026/56"),
         ("2026","Scalable and reliable stochastic parametric verification with stochastic variational smoothed model checking","Cairoli, Bortolussi &middot; Int. J. Syst. Sci.",""),
         ("2026","Localized Anomaly Detection via Differentiable D-vine Copulas","Pearson, Zanello, Russo, Bortolussi, Cairoli &middot; CAESAR @ ECML-PKDD 2026","https://arxiv.org/abs/2607.25020"),
+        ("2025","Conformal quantitative predictive monitoring of stochastic systems with conditional validity","Cairoli, Kuipers, Bortolussi, Paoletti &middot; Nonlinear Anal. Hybrid Syst.","https://doi.org/10.1016/j.nahs.2025.101606"),
+        ("2025","Certified Guidance for Planning with Deep Generative Models","Giacomarra, Hosseini, Paoletti, Cairoli &middot; AAMAS 2025","https://dl.acm.org/doi/10.5555/3709347.3743606"),
         ("2025","CoCAI: Copula-Based Conformal Anomaly Identification for Multivariate Time-Series","Pearson, Zanello, Russo, Bortolussi, Cairoli &middot; RV 2025","https://arxiv.org/abs/2507.17796"),
         ("2025","Conformal Predictive Monitoring for Multi-modal Scenarios","Cairoli, Bortolussi, Deshmukh, Lindemann, Paoletti &middot; RV 2025","https://arxiv.org/abs/2509.01338"),
         ("2025","Diffusion-based Time Series Forecasting for Sewerage Systems","Pearson, Cairoli, Bortolussi, Russo, Zanello","https://arxiv.org/abs/2506.08577"),
@@ -174,9 +198,13 @@ people = {
 ),
 "saveri": dict(
     name="Gaia Saveri",
-    role="Research Collaborator &middot; PhD (national AI programme)",
-    tags=tag("neuro-explicit methods","terracotta")+tag("formal methods","yellow")+tag("explainability")+tag("LLM"),
-    bio="Builds neuro-explicit representations: continuous, invertible embeddings of Signal Temporal Logic formulae that let generative models be steered and constrained by explicit symbolic specifications, rather than learning them implicitly. Also works on concept-based explainability for time series (the STELLE framework, with Irene Ferfoglia and Simone Silvetti), making model decisions traceable back to human-readable logical concepts.",
+    role="Postdoc",
+    tags=tag("neuro-symbolic","terracotta")+tag("BPMN","blue")+tag("GenAI","green"),
+    bio="She is a postdoctoral researcher in neuro-symbolic computing (with a focus on integrating temporal logic requirements in learning architectures) and business process modelling and simulation. Besides, she is involved in projects promoting the use of generative AI (especially that with a neuro-symbolic flavour!) in healthcare and public administration.",
+    links=dict(
+        scholar="https://scholar.google.com/citations?user=AH33w6EAAAAJ",
+        linkedin="https://www.linkedin.com/in/gaia-saveri-b7059a1b7/",
+    ),
     pubs=[
         ("2026","Distilling Formal Logic into Neural Spaces: A Kernel Alignment Approach for STL","Candussio, Sarti, Saveri, Bortolussi &middot; NeSy 2026",""),
         ("2025","Guided by Stars: Interpretable Concept Learning Over Time Series via Temporal Logic Semantics","Ferfoglia, Silvetti, Saveri, Nenzi, Bortolussi","https://arxiv.org/abs/2511.04244"),
@@ -187,6 +215,25 @@ people = {
         ("2024","Retrieval-Augmented Mining of Temporal Logic Specifications from Data","Saveri, Bortolussi &middot; ECML-PKDD 2024","https://arxiv.org/abs/2405.14355"),
         ("2023","Towards Invertible Semantic-Preserving Embeddings of Logical Formulae","Saveri, Bortolussi &middot; NeSy 2023",""),
         ("2022","Graph Neural Networks for Propositional Model Counting","Saveri, Bortolussi","https://arxiv.org/abs/2205.04423"),
+    ]
+),
+"silvetti": dict(
+    name="Simone Silvetti",
+    role="Postdoc",
+    tags=tag("formal methods","yellow")+tag("neuro-explicit","terracotta")+tag("interpretability","pink"),
+    bio="Simone Silvetti is a postdoctoral fellow at the Department of Engineering and Architecture of the University of Trieste. His research combines machine learning with quantitative formal methods to verify and design complex systems, with contributions to temporal logic specification languages and the monitoring of cyber-physical systems. His current interests include neuro-symbolic approaches that embed temporal logic formulae into continuous spaces, with applications to time series analysis and reinforcement learning. He is exploring how interpretable temporal logic patterns can be extracted from inference-time trajectories of large language models, to monitor generation at runtime and anticipate failures such as hallucinations. He also works on machine learning for edge devices, compressing computer vision models and developing audio models for insect sound recognition. He studied mathematics at Sapienza University of Rome, received a PhD in computer science from the University of Udine, and spent ten years at Esteco before joining the University of Trieste.",
+    links=dict(
+        website="https://simonesilvetti.com",
+        scholar="https://scholar.google.com/citations?user=q_ax9IUAAAAJ",
+        github="https://github.com/simonesilvetti",
+        linkedin="https://www.linkedin.com/in/simonesilvetti/",
+    ),
+    pubs=[
+        ("2026","Time Robustness for Point-Based Semantics of Metric Interval Temporal Logic","Silvetti, Compagnucci, Cairoli, Trubiani, Nenzi &middot; KR 2026","https://doi.org/10.24963/kr.2026/56"),
+        ("2025","Guided by Stars: Interpretable Concept Learning Over Time Series via Temporal Logic Semantics","Ferfoglia, Silvetti, Saveri, Nenzi, Bortolussi","https://arxiv.org/abs/2511.04244"),
+        ("2024","Is Machine Learning Model Checking Privacy Preserving?","Bortolussi, Nenzi, Saveri, Silvetti &middot; ISoLA 2024",""),
+        ("2023","MoonLight: a lightweight tool for monitoring spatio-temporal properties","Nenzi, Bartocci, Bortolussi, Silvetti, Loreti &middot; STTT",""),
+        ("2020","MoonLight: A Lightweight Tool for Monitoring Spatio-Temporal Properties","Bartocci, Bortolussi, Loreti, Nenzi, Silvetti &middot; RV 2020",""),
     ]
 ),
 "ballarin": dict(
@@ -224,11 +271,19 @@ people = {
 "della-rovere": dict(
     name="Sandro Junior Della Rovere",
     role="PhD Student",
-    tags=tag("reinforcement learning")+tag("analog IC design","terracotta")+tag("trustworthy GenAI","yellow"),
-    bio="Works on reinforcement learning for the floorplanning of analog integrated circuits, in collaboration with Infineon Technologies (Villach/Munich). Also co-author of RogueAI, testing whether conversational generative models can be trusted to be honest &mdash; a second line of work connecting back to the lab's broader trustworthy-GenAI agenda.",
+    tags=tag("electronic design automation","slate")+tag("analog integrated circuit layout","rose")+tag("reinforcement learning"),
+    bio="My research is in the Electronic Design Automation field, with a focus on analog integrated circuit layout automation. My current research combines reinforcement learning for device placement, sequential pathfinding for net routing, and tree search extensions for whole-layout optimization.</p>\n    <p>Going forward, I plan to explore LLM agents in the loop and surrogate models for post-layout simulation, with the aim of building AI-based tools for a field that remains largely unexplored.</p>\n    <p>Beyond the lab, I am an enthusiast of all things science and technology.",
+    links=dict(
+        scholar="https://scholar.google.com/citations?user=bDF_aCEAAAAJ",
+        orcid="https://orcid.org/0009-0005-8881-5339",
+        github="https://github.com/5JDR",
+        linkedin="https://www.linkedin.com/in/sandrojuniordellarovere",
+        x="https://x.com/5JDR0",
+    ),
     pubs=[
+        # TODO: switch to the ACL anthology link once the proceedings are out
         ("2026","RogueAI: A Reverse Turing Test for Detecting Licensed AI Deception in Dialogue","Candussio, Ballarin, Bonin, Della Rovere, Bortolussi","https://arxiv.org/abs/2606.13310"),
-        ("2025","Enhancing Reinforcement Learning for the Floorplanning of Analog ICs with Beam Search","Della Rovere, Basso, Bortolussi, Videnovic-Misic, Habal &middot; SMACD 2025","https://arxiv.org/abs/2505.05059"),
+        ("2025","Enhancing Reinforcement Learning for the Floorplanning of Analog ICs with Beam Search","Della Rovere, Basso, Bortolussi, Videnovic-Misic, Habal &middot; SMACD 2025","https://ieeexplore.ieee.org/document/11092015"),
     ]
 ),
 "della-siega": dict(
@@ -272,7 +327,7 @@ people = {
 
 for slug, p in people.items():
     pubs_html = "\n".join(pub(*args) for args in p["pubs"]) if p["pubs"] else '      <p style="color:var(--ink-soft); font-size:14.5px;">No publications listed yet.</p>'
-    html = TEMPLATE.format(name=p["name"], role=p["role"], tags=p["tags"], bio=p["bio"], pubs=pubs_html)
+    html = TEMPLATE.format(name=p["name"], role=p["role"], tags=p["tags"], bio=p["bio"], pubs=pubs_html, links=links_html(p.get("links")))
     path = f"people/{slug}/index.html"
     with open(path, "w") as f:
         f.write(html)
